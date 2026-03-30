@@ -1,0 +1,310 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: aula-demo-02
+meta:
+  id: wrk_01c4b53f16454daa99cfefc33af97b9a
+  created: 1774891696784
+  modified: 1774891696784
+  description: ""
+collection:
+  - name: categorias
+    meta:
+      id: fld_f8941ea8dac74eea806526801bd07507
+      created: 1774894375591
+      modified: 1774894375591
+      sortKey: -1774894375591
+      description: ""
+    children:
+      - url: " http://localhost:8080/categorias"
+        name: Criar
+        meta:
+          id: req_28abab7983c94a8fb3163146dcde8f46
+          created: 1774891709563
+          modified: 1774895072890
+          isPrivate: false
+          description: ""
+          sortKey: -1774894378503
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "Calça jeans" ,
+            	"descricao": "Calça cós baixo jeans"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: " http://localhost:8080/categorias"
+        name: selecionar
+        meta:
+          id: req_7819d63f2e8248a9b1bb795a1ddd3dfe
+          created: 1774891993654
+          modified: 1774894379751
+          isPrivate: false
+          description: ""
+          sortKey: -1774894378303
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/categorias/2
+        name: deletar
+        meta:
+          id: req_e014b484ccf540f2b8309b73ddd6d771
+          created: 1774892034860
+          modified: 1774894378289
+          isPrivate: false
+          description: ""
+          sortKey: -1774894378203
+        method: DELETE
+        parameters:
+          - name: id
+            value: "2"
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: " http://localhost:8080/categorias"
+        name: atualizar
+        meta:
+          id: req_56bf8a046d71422ebd264e9d21a5dec8
+          created: 1774894448607
+          modified: 1774894448607
+          isPrivate: false
+          description: ""
+          sortKey: -1774894378353
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "Blusas" ,
+            	"descricao": "Blusas tamanho pp"
+            }
+        parameters:
+          - name: id
+            value: "1"
+            description: ""
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: produto
+    meta:
+      id: fld_76a590566a494d9e9a21c6f46daea7c8
+      created: 1774894392869
+      modified: 1774894392869
+      sortKey: -1774894392869
+      description: ""
+    children:
+      - url: http://localhost:8080/produtos
+        name: selecionar
+        meta:
+          id: req_f4bf772825154defb6d230effcbe6564
+          created: 1774894420456
+          modified: 1774894786755
+          isPrivate: false
+          description: ""
+          sortKey: -1774894420456
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos
+        name: Criar
+        meta:
+          id: req_31e02f01043d468da2c46b3dfd1f3cbf
+          created: 1774894438789
+          modified: 1774895236507
+          isPrivate: false
+          description: ""
+          sortKey: -1774894420556
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: idCategoria
+              value: "3"
+              description: ""
+              disabled: false
+              multiline: false
+              type: text
+            - name: nome
+              value: Calça preta
+              description: ""
+              disabled: false
+            - name: valor
+              value: "120.00"
+              description: ""
+              disabled: false
+            - name: image
+              value: ""
+              description: ""
+              disabled: false
+              fileName: C:\Users\45567392842\Downloads\download (7).jpg
+              type: file
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos/2
+        name: deletar
+        meta:
+          id: req_95a773bdd80245c28201e881e82d04d7
+          created: 1774894456695
+          modified: 1774894970132
+          isPrivate: false
+          description: ""
+          sortKey: -1774894420756
+        method: DELETE
+        parameters:
+          - name: id
+            value: "2"
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos
+        name: atualizar
+        meta:
+          id: req_fafbeeb1056b4631910e8db26fd28c0a
+          created: 1774894843554
+          modified: 1774895314029
+          isPrivate: false
+          description: ""
+          sortKey: -1774894420506
+        method: PUT
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: idCategoria
+              value: "3"
+              description: ""
+              disabled: false
+              multiline: false
+              type: text
+            - name: nome
+              value: Calça preta
+              description: ""
+              disabled: false
+            - name: valor
+              value: "100.00"
+              description: ""
+              disabled: false
+            - name: image
+              value: ""
+              description: ""
+              disabled: false
+              fileName: C:\Users\45567392842\Downloads\download (7).jpg
+              type: file
+        parameters:
+          - name: id
+            value: "8"
+            description: ""
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_283b7189bdad069c7d36fb31e44244a9539c31eb
+    created: 1774891696825
+    modified: 1774891696825
+environments:
+  name: Base Environment
+  meta:
+    id: env_283b7189bdad069c7d36fb31e44244a9539c31eb
+    created: 1774891696803
+    modified: 1774891696803
+    isPrivate: false
