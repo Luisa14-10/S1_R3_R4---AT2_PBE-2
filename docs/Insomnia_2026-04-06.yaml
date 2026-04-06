@@ -295,6 +295,71 @@ collection:
             send: true
             store: true
           rebuildPath: true
+  - name: Cliente
+    meta:
+      id: fld_3bbf6e51f2ec4098b0da50a4c92f51bf
+      created: 1775474489741
+      modified: 1775474489741
+      sortKey: -1775474489741
+      description: ""
+    children:
+      - url: http://localhost:8080/clientes
+        name: Criar
+        meta:
+          id: req_9a2f2b0bb1614b6196d26ab2796187a1
+          created: 1775474535997
+          modified: 1775474720509
+          isPrivate: false
+          description: ""
+          sortKey: -1775474535997
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "Ramom",
+              "cpf": "12445678801",
+              "cep": "01001000",
+              "telefones": ["11999999999", "11888888888"]
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/clientes
+        name: Selecionar
+        meta:
+          id: req_efdc8835dd5a42f7984a974bcf50e731
+          created: 1775474550334
+          modified: 1775474828294
+          isPrivate: false
+          description: ""
+          sortKey: -1775474550334
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:
